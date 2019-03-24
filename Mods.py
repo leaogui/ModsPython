@@ -53,13 +53,13 @@ def main():
 
     flag = 0
 
-    print("Bem vindo ao programa para fazer uma lista de mods")
+    print("Bem vindo ao programa para fazer uma lista de mods, é altamente recomendado para o usuário ler as informações extras (opção 5).")
 
 
     while(True):
 
 
-        print("Para adicionar algo, digite 1, para checar se um mod está na lista, digite 2, para checar a lista, digite 3, para informações do programa, digite 4, para deletar algum mod, digite 5, para sair digite outra coisa.\n")
+        print("Para adicionar algo, digite 1. Para checar se um mod está na lista, digite 2. Para checar a lista, digite 3. Para deletar algum mod, digite 4. para informações do programa, digite 5. Para sair digite outra coisa.\n")
 
         choice = input("Escolha: ")
 
@@ -114,13 +114,8 @@ def main():
             print("Os mods atuais são: \n")
             printar()
             print("\n")
-
-        elif(choice == '4'):
-
-            print("\n Programa feito para listar lista de mods para jogos.\n Palavras ambíguas como 'CRAFT' podem gerar problemas ao identificar, seja específico.\n O programa diferencia letras maíusculas de minúsculas.\n Tudo é salvo no .txt na pasta do programa. \n\n")
-
         
-        elif(choice == '5'):
+        elif(choice == '4'):
 
             print("Qual o mod que deseja deletar?")
             delete = input ("Escolha: ")
@@ -132,14 +127,27 @@ def main():
                 deletar(delete)
                 print("\nO mod foi deletado.\n")
             else:
-                print("\nO mod não existe na lista.")
+                print("\nO mod não existe na lista.\n")
+
+        elif(choice == '5'):
+
+            print("\n Programa feito para listar lista de mods para jogos.\n Palavras ambíguas como 'CRAFT' podem gerar problemas ao identificar, seja específico.\n O programa diferencia letras maiúsculas de minúsculas.\n Tudo é salvo no .txt na pasta do programa. \n\n")            
 
         else:
 
-            print("Obrigado por usar o programa!\n")
+            print("Deseja mesmo fechar o programa?")
+            
+            exit = input("Escolha: ")
 
+            cls()
 
-            break
+            if(exit == 's' or exit == 'S' or exit == 'Sim' or exit == 'sim'):
+
+                print("Obrigado por usar o programa!\n")
+                input()
+                break
+
+  
 
 
 
