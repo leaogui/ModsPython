@@ -15,7 +15,9 @@ def existcheck(palavra):
     with open("Mods.txt") as arq: 
         for line in arq: 
             if palavra in line: 
+                arq.close
                 return True
+        arq.close
         return False
 
 def checar(palavra):
@@ -25,8 +27,9 @@ def checar(palavra):
             if palavra in line:
                 cls()
                 print("\nO mod está na lista.\n")
+                arq.close
                 return True
-
+        arq.close
         return False
 
 def printar():
@@ -34,6 +37,7 @@ def printar():
      with open("Mods.txt") as arq: 
         for line in arq:  
                 print(line)
+                arq.close
 
 
 def deletar(delete):
@@ -45,7 +49,7 @@ def deletar(delete):
             if line.strip("\n") != delete:
                 arq.write(line)
                 arq.truncate()
-
+                arq.close
 
 def main():
 
